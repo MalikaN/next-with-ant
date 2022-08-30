@@ -51,17 +51,11 @@ const AppLayout = (props: { children: string | number | boolean | React.ReactEle
             case "/":
                 setSiderKey(0);
                 break;
-            case "/profile":
+            case "/about":
                 setSiderKey(1);
                 break;
-            case "/videos":
+            case "/profile":
                 setSiderKey(2);
-                break;
-            case "/backup":
-                setSiderKey(3);
-                break;
-            case "/analytics":
-                setSiderKey(4);
                 break;
         }
         return () => {
