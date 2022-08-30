@@ -44,7 +44,7 @@ const columns = [
     },
 ];
 
-const profile = props => {
+const profile = () => {
     return (
         <AppLayout>
             <Row style={{ marginTop: "0.5rem" }}>

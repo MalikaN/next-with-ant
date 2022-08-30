@@ -27,7 +27,7 @@ const { Search } = Input;
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const AppLayout = (props) => {
+const AppLayout = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
     const [siderKey, setSiderKey] = useState(0);
     const [isSiderCollapsed, setSiderCollapsed] = useState(false);
     const [window, setWindow] = useState({ width: -1, height: -1 });

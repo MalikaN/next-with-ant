@@ -44,7 +44,7 @@ const columns = [
     },
 ];
 
-const About = props => {
+const About = () => {
     return (
         <AppLayout>
             <Row style={{ marginTop: "0.5rem" }}>
