@@ -1,89 +1,71 @@
-import {
-  Button,
-  DatePicker,
-  Form,
-  InputNumber,
-  Select,
-  Slider,
-  Switch,
-} from 'antd'
-import type { DatePickerProps } from 'antd'
-import { SmileFilled } from '@ant-design/icons'
-import Link from 'next/link'
+// core
+import React from "react";
+// antd
+import { Typography, Divider, Button, Card } from "antd";
+const { Title, Text } = Typography;
+// components
+import AppLayout from "../components/AppLayout";
 
-const FormItem = Form.Item
-const Option = Select.Option
+const App = () => (
+  <AppLayout>
+    <div>Home Page</div>
+    <Title>Nextjs with Ant Design & Less</Title>
+    <Text>
+      Go ahead and edit <code>/pages/index.js</code>, and see your changes here
+    </Text>
+    <Divider />
+    <Title level={2}>Useful Links</Title>
+    <Button
+      href="https://nextjs.org/learn/basics/getting-started"
+      target="__blank"
+    >
+      Next.js Learn
+    </Button>
+    <Button href="https://nextjs.org/docs/getting-started" target="__blank">
+      Next.js Docs
+    </Button>
+    <Button href="https://ant.design/components/button/" target="__blank">
+      antd Docs
+    </Button>
 
-const content = {
-  marginTop: '100px',
-}
+    <Divider />
+    <div style={{ textAlign: "start" }}>
+      <Card>
+        <Title level={2}>Quick Recap:</Title>
+        <Title level={4}>Shared App Layout</Title>
+        <Text>
+          Shared/Common App Layout is located at{" "}
+          <code>/components/AppLayout</code>
+        </Text>
+        <br />
+        <Text>Sider/sidebar, header and footer are all in this file.</Text>
 
-export default function Home() {
-  const onDatePickerChange: DatePickerProps['onChange'] = (
-    date,
-    dateString
-  ) => {
-    console.log(date, dateString)
-  }
+        <br />
+        <br />
 
-  return (
-    <div style={content}>
-      <div className="text-center mb-5">
-        <Link href="#">
-          <a className="logo mr-0">
-            <SmileFilled style={{ fontSize: 48 }} />
-          </a>
-        </Link>
-
-        <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
-      </div>
-      <div>
-        <Form
-          layout="horizontal"
-          size={'large'}
-          labelCol={{ span: 8 }}
-          wrapperCol={{ span: 8 }}
-        >
-          <FormItem label="Input Number">
-            <InputNumber
-              min={1}
-              max={10}
-              style={{ width: 100 }}
-              defaultValue={3}
-              name="inputNumber"
-            />
-          </FormItem>
-
-          <FormItem label="Switch">
-            <Switch defaultChecked />
-          </FormItem>
-
-          <FormItem label="Slider">
-            <Slider defaultValue={70} />
-          </FormItem>
-
-          <FormItem label="Select">
-            <Select defaultValue="lucy" style={{ width: 192 }}>
-              <Option value="jack">jack</Option>
-              <Option value="lucy">lucy</Option>
-              <Option value="disabled" disabled>
-                disabled
-              </Option>
-              <Option value="yiminghe">yiminghe</Option>
-            </Select>
-          </FormItem>
-
-          <FormItem label="DatePicker">
-            <DatePicker showTime onChange={onDatePickerChange} />
-          </FormItem>
-          <FormItem style={{ marginTop: 48 }} wrapperCol={{ offset: 8 }}>
-            <Button type="primary" htmlType="submit">
-              OK
-            </Button>
-            <Button style={{ marginLeft: 8 }}>Cancel</Button>
-          </FormItem>
-        </Form>
-      </div>
+        <Title level={4}>antd Less</Title>
+        <Text>
+          antd's Less file is present at <code>/assets/antd-custom.less</code>
+        </Text>
+        <br />
+        <Text>
+          Head over to{" "}
+          <a
+            href="https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less"
+            target="__blank"
+          >
+            antd's theming docs
+          </a>{" "}
+          for a list of less variables.
+        </Text>
+        <br />
+        <Text>
+          If you dont wish to mess around with Less, just delete everything in
+          the less file.
+        </Text>
+      </Card>
     </div>
-  )
-}
+  </AppLayout>
+);
+
+export default App;
