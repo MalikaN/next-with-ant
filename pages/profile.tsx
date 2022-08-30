@@ -48,7 +48,7 @@ const profile = () => {
     return (
         <AppLayout>
             <Row style={{ marginTop: "0.5rem" }}>
-                <h2>Profile page</h2>
+                <h2 id="about_heading">Profile page</h2>
                 <Col span={24} id="profile-table">
                     <Table className='onboardinglist-table' dataSource={dataSource} columns={columns} />
                 </Col>
