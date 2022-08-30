@@ -49,7 +49,7 @@ const About = () => {
         <AppLayout>
             <Row style={{ marginTop: "0.5rem" }}>
                 <h2>About page</h2>
-                <Col span={24} data-intercom-target="candidate-table">
+                <Col span={24} id="about-table">
                     <Table className='candidateSearchlist-table' dataSource={dataSource} columns={columns} />
                 </Col>
 
