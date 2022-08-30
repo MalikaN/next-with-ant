@@ -48,9 +48,11 @@ const About = () => {
     return (
         <AppLayout>
             <Row style={{ marginTop: "0.5rem" }}>
-                <h2>About page</h2>
+                <h2 id="about_heading">About page</h2>
                 <Col span={24} id="about-table">
-                    <Table className='candidateSearchlist-table' dataSource={dataSource} columns={columns} />
+                    <div id="about_table">
+                        <Table className='candidateSearchlist-table' dataSource={dataSource} columns={columns} />
+                    </div>
                 </Col>
 
             </Row>
