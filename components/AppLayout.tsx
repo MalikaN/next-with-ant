@@ -104,15 +104,23 @@ const AppLayout = (props: { children: string | number | boolean | React.ReactEle
                 </div>
                 <Menu theme="dark" mode="inline" selectedKeys={[siderKey.toString()]}>
                     <Menu.Item key="0">
-                        <Link href="/about">
+                        <Link href="/">
                             <div>
                                 <HomeOutlined />
                                 <span className="nav-text">Home</span>
                             </div>
                         </Link>
                     </Menu.Item>
-
                     <Menu.Item key="1">
+                        <Link href="/about">
+                            <div>
+                                <HomeOutlined />
+                                <span className="nav-text">About</span>
+                            </div>
+                        </Link>
+                    </Menu.Item>
+
+                    <Menu.Item key="2">
                         <Link href="/profile">
                             <div>
                                 <UserOutlined />
